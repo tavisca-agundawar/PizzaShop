@@ -141,6 +141,8 @@ namespace PizzaShop
             string format = "{0,-45} | {1,-30} | {2,-50} | {3,-25}";
             Console.WriteLine(string.Format(format,
                               "Name","Category","Toppings","Base"));
+            Console.WriteLine("--------------------------------------------------------------------------------------------" +
+                "----------------------------------------------------------");
             for (int i = 0; i < pizzas.Count; i++)
             {
                 Console.WriteLine(string.Format(format,pizzas[i].Name, pizzas[i].Category, GetToppingsString(pizzas[i].Toppings), pizzas[i].Base));
@@ -152,7 +154,11 @@ namespace PizzaShop
             var builder = new StringBuilder();
             for (int i = 0; i < toppings.Count; i++)
             {
-                builder.Append(toppings[i].Name + ", ");
+                builder.Append(toppings[i].Name);
+                if (i != toppings.Count - 1)
+                {
+                    builder.Append(", ");
+                }
             }
             return builder.ToString();
         }

@@ -53,7 +53,9 @@ namespace PizzaShop.Services
             {
                 return false;
             }
+            _shoppingCartService.ShowCartItems();
             _bookingService.PlaceOrder(cart);
+            _shoppingCartService.ClearCart();
             return true;
         }
 

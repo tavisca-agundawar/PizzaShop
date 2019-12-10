@@ -34,7 +34,9 @@ namespace ShoppingCart.Services
 
         public void ShowCartItems()
         {
-            Console.WriteLine("Pizza Name\t Quantity\t Cost");
+            Console.WriteLine("--------------------------------------------------------------------------");
+            Console.WriteLine(string.Format("{0,-45} | {1,-10} | {2,-10}", "Pizza Name", "Quantity", "Cost"));
+            Console.WriteLine("--------------------------------------------------------------------------");
             for (int i = 0; i < _shoppingCart.CartItems.Count; i++)
             {
                 Console.WriteLine(string.Format("{0,-45} | {1,-10} | {2,-10}",
@@ -42,9 +44,15 @@ namespace ShoppingCart.Services
                                   _shoppingCart.CartItems[i].Quantity,
                                   _shoppingCart.CartItems[i].TotalCost));
             }
-            Console.WriteLine("----------------------------------------------------------------");
-            Console.WriteLine(string.Format("{0,-44} | {1,+20}","Total Cost: ",_shoppingCart.Value));
-            Console.WriteLine("----------------------------------------------------------------");
+            Console.WriteLine("--------------------------------------------------------------------------");
+            Console.WriteLine(string.Format("{0,-45} | {1,-20}","Total Cost: ","$"+_shoppingCart.Value));
+            Console.WriteLine("--------------------------------------------------------------------------");
+        }
+
+        public void ClearCart()
+        {
+            _shoppingCart.CartItems.Clear();
+            _shoppingCart.Value = 0;
         }
     }
 }

@@ -10,5 +10,6 @@ namespace PizzaShop.Contracts
         Task<bool> AddToCart(CartItem item);
         ShoppingCartModel GetCart();
         void ShowCartItems();
+        void ClearCart();
     }
 }
