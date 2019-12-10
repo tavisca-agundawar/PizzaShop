@@ -1,0 +1,146 @@
+[
+  {
+    "name": "Marinara Twist",
+    "category": "Non-Vegetarian",
+    "price": "72.68",
+    "base": "Cheese burst",
+    "toppings": [
+      {
+        "name": "Olives",
+        "category": "Vegetarian",
+        "price": "18.06"
+      },
+      {
+        "name": "Roast Chicken",
+        "category": "Non-Vegetarian",
+        "price": "7.89"
+      },
+      {
+        "name": "Ham",
+        "category": "Non-Vegetarian",
+        "price": "16.06"
+      }
+    ]
+  },
+  {
+    "name": "Margherita Twist",
+    "category": "Non-Vegetarian",
+    "price": "55.89",
+    "base": "Four cheese",
+    "toppings": [
+      {
+        "name": "Extra Cheese",
+        "category": "Vegetarian",
+        "price": "15.29"
+      }
+    ]
+  },
+  {
+    "name": "Napoletana Twist",
+    "category": "Non-Vegetarian",
+    "price": "83.24",
+    "base": "Cheese burst",
+    "toppings": [
+      {
+        "name": "Olives",
+        "category": "Vegetarian",
+        "price": "5.17"
+      },
+      {
+        "name": "Ham",
+        "category": "Non-Vegetarian",
+        "price": "16.06"
+      }
+    ]
+  },
+  {
+    "name": "Margherita Blast",
+    "category": "Vegan",
+    "price": "80.64",
+    "base": "Thin crust",
+    "toppings": [
+      {
+        "name": "Pineapple",
+        "category": "Vegetarian",
+        "price": "15.67"
+      },
+      {
+        "name": "Olives",
+        "category": "Vegetarian",
+        "price": "19.15"
+      }
+    ]
+  },
+  {
+    "name": "Americana Blast",
+    "category": "Vegan",
+    "price": "79.56",
+    "base": "Four cheese",
+    "toppings": [
+      {
+        "name": "Chicken Sausage",
+        "category": "Non-Vegetarian",
+        "price": "11.31"
+      },
+      {
+        "name": "Pineapple",
+        "category": "Vegetarian",
+        "price": "17.82"
+      }
+    ]
+  },
+  {
+    "name": "Margherita Twist",
+    "category": "Vegan",
+    "price": "49.17",
+    "base": "Cheese burst",
+    "toppings": [
+      {
+        "name": "Pineapple",
+        "category": "Vegetarian",
+        "price": "6.10"
+      },
+      {
+        "name": "Pineapple",
+        "category": "Vegan",
+        "price": "9.22"
+      },
+      {
+        "name": "Olives",
+        "category": "Vegetarian",
+        "price": "7.79"
+      }
+    ]
+  },
+  {
+    "name": "Americana Cheese",
+    "category": "Vegan",
+    "price": "63.65",
+    "base": "Cheese Poppers",
+    "toppings": [
+      {
+        "name": "Olives",
+        "category": "Vegetarian",
+        "price": "7.25"
+      }
+    ]
+  },
+  {
+    "name": "Marinara Blast",
+    "category": "Vegan",
+    "price": "33.74",
+    "base": "Thin crust",
+    "toppings": [
+      {
+        "name": "Extra Cheese",
+        "category": "Vegetarian",
+        "price": "7.64"
+      },
+      {
+        "name": "Pineapple",
+        "category": "Vegetarian",
+        "price": "18.98"
+      }
+    ]
+  }
+]
