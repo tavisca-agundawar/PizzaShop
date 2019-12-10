@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 using PizzaShop.Contracts;
-using PizzaShop.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -11,9 +10,8 @@ namespace PizzaShop
     {
         static void Main(string[] args)
         {
-
+            PizzaShop pizzaShop = new PizzaShop();
+            pizzaShop.Run();
         }
-
-        
     }
 }

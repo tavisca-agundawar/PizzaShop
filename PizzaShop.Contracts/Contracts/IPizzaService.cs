@@ -10,5 +10,6 @@ namespace PizzaShop.Contracts
         List<Pizza> GetMenu();
         Task<bool> AddPizzaToCart(Pizza pizza, int quantity);
         Task<bool> PlaceOrder();
+        void ViewCart();
     }
 }

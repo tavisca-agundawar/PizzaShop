@@ -4,9 +4,8 @@ using System.Text;
 
 namespace PizzaShop.Contracts
 {
-    public interface IShoppingCart
+    public interface IBookingService
     {
-        List<CartItem> CartItems { get; set; }
-        double Value { get; set; }
+        void PlaceOrder(ShoppingCartModel cart);
     }
 }

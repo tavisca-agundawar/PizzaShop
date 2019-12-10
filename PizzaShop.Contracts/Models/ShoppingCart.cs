@@ -9,5 +9,9 @@ namespace PizzaShop.Contracts
     {
         public List<CartItem> CartItems { get; set; }
         public double Value { get; set; }
+        public ShoppingCartModel()
+        {
+            CartItems = new List<CartItem>();
+        }
     }
 }
