@@ -5,6 +5,7 @@ using ShoppingCart.Services;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -67,6 +68,7 @@ namespace PizzaShop.Services
                 dummyPizzas = reader.ReadToEnd();
             }
             Pizzas = JsonConvert.DeserializeObject<List<Pizza>>(dummyPizzas);
+            Pizzas = Pizzas.OrderBy(p => p.Category).ToList();
         }
 
         public void ViewCart()

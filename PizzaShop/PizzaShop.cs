@@ -9,10 +9,12 @@ namespace PizzaShop
     public class PizzaShop
     {
         private readonly IPizzaService _pizzaService;
+        private readonly DisplayService _display;
         private readonly List<string> choices;
         public PizzaShop()
         {
             _pizzaService = new PizzaService();
+            _display = new DisplayService();
             choices = new List<string>();
             var ch = Enum.GetNames(typeof(Choices));
             for (int i = 0; i < ch.Length; i++)
@@ -45,15 +47,16 @@ namespace PizzaShop
                     case "Menu":
                         {
                             var pizzas = _pizzaService.GetMenu();
-                            DisplayPizzas(pizzas);
+                            _display.Pizzas(pizzas);
                             break;
                         }
                     case "AddPizza":
                         {
                             var pizzas = _pizzaService.GetMenu();
-                            Pizza choice = DisplayPizzaChoices(pizzas);
+                            Pizza choice = _display.PizzaChoices(pizzas);
                             int quantity = GetQuantity();
                             _pizzaService.AddPizzaToCart(choice, quantity);
+                            _display.PizzaAdded(choice, quantity);
                             break;
                         }
                     case "ViewCart":
@@ -104,65 +107,6 @@ namespace PizzaShop
             }
 
         }
-
-        private Pizza DisplayPizzaChoices(List<Pizza> pizzas)
-        {
-            for (int i = 0; i < pizzas.Count; i++)
-            {
-                Console.WriteLine($"{i+1}. {pizzas[i].Name}");
-            }
-            string value;
-            int choice;
-            while (true)
-            {
-                value = Console.ReadLine();
-                if (string.IsNullOrEmpty(value))
-                {
-                    Console.WriteLine("Value cannot be blank!");
-                }
-                else
-                {
-                    try
-                    {
-                        choice = Convert.ToInt32(value);
-                        var pizza = pizzas[choice];
-                        return pizza;
-                    }
-                    catch (Exception)
-                    {
-                        Console.WriteLine("Invalid choice!");
-                    }
-                }
-            }
-        }
-
-        private void DisplayPizzas(List<Pizza> pizzas)
-        {
-            string format = "{0,-45} | {1,-30} | {2,-50} | {3,-25}";
-            Console.WriteLine(string.Format(format,
-                              "Name","Category","Toppings","Base"));
-            Console.WriteLine("--------------------------------------------------------------------------------------------" +
-                "----------------------------------------------------------");
-            for (int i = 0; i < pizzas.Count; i++)
-            {
-                Console.WriteLine(string.Format(format,pizzas[i].Name, pizzas[i].Category, GetToppingsString(pizzas[i].Toppings), pizzas[i].Base));
-            }
-        }
-
-        private string GetToppingsString(List<Topping> toppings)
-        {
-            var builder = new StringBuilder();
-            for (int i = 0; i < toppings.Count; i++)
-            {
-                builder.Append(toppings[i].Name);
-                if (i != toppings.Count - 1)
-                {
-                    builder.Append(", ");
-                }
-            }
-            return builder.ToString();
-        }
-
         private string GetChoice()
         {
             string value;

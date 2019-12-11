@@ -9,7 +9,7 @@ namespace BookingEngine.Services
     {
         public void PlaceOrder(ShoppingCartModel cart)
         {
-            Console.WriteLine("Order has been placed for your cart!\nTotal Value: "+ cart.Value);
+            Console.WriteLine("Order has been placed for your cart!\nTotal Value: $"+ cart.Value);
         }
     }
 }
